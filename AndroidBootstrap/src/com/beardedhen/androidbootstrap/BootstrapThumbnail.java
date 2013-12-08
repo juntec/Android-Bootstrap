@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,8 +18,8 @@ import android.widget.TextView;
 
 public class BootstrapThumbnail extends FrameLayout
 {
-    private static final int DEFAULT_WIDTH = 150; //width of thumbnail when no width is given
-    private static final int DEFAULT_HEIGHT = 150;//height of thumbnail when no height is given
+    private static final int DEFAULT_WIDTH = 50; //width in dp of thumbnail when no width is given
+    private static final int DEFAULT_HEIGHT = 50;//height in dp of thumbnail when no height is given
     private static final int DEFAULT_MAX_PADDING = 8; //8dp is max padding size when padding isn't specified by user
     private static final int DEFAULT_MIN_PADDING = 4; //4dp
     private static final String DEFAULT_TYPE = "rounded";
@@ -92,8 +93,8 @@ public class BootstrapThumbnail extends FrameLayout
         String text = "";
         int imageDrawable = 0;
         float scale = getResources().getDisplayMetrics().density; //for padding
-        int width = DEFAULT_WIDTH;
-        int height = DEFAULT_HEIGHT;
+        int width = this.dpToPx(DEFAULT_WIDTH);
+        int height = (this.dpToPx(DEFAULT_HEIGHT));
         int padding = 0;
         int paddingDP = 0;
 
@@ -130,6 +131,7 @@ public class BootstrapThumbnail extends FrameLayout
 
         a.recycle();
 
+        //convert back to dp for display
         text = (int)(width/scale) + "x" + (int)(height/scale);
         View v = inflator.inflate(R.layout.thumbnail, null, false);
 
@@ -204,5 +206,17 @@ public class BootstrapThumbnail extends FrameLayout
             }
         }
 
+    }
+
+    /**
+     * Convert dp value to pixels
+     * @param dp
+     * @return
+     */
+    private int dpToPx(int dp)
+    {
+        DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
+        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+        return px;
     }
 }
