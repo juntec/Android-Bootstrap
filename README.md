@@ -11,10 +11,6 @@ Android-Bootstrap
 * Added a theme
 * There might be more but I can't think right now
 
-<h3>Working On:</h3>
-* Experimenting with Typography so users can do things like:
-    <code>com.beardedhen.androidbootstrap.typography.heading</code> to get a nice looking heading without having to apply styles themselves, but everything can still be overridden by the user if they want. This is already working actually, but I am still working on it.
-
 
 Forked from [Bearded-Hen](https://github.com/Bearded-Hen) at [Android-Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap) 
 
