@@ -75,6 +75,7 @@ EditText
 
 ![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/bootstrap_edit_text.png "edit text backgrounds")
 
+
 Rounded Edit text
 ![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/bootstrap_edit_text_rounded.png "edit text backgrounds rounded")
 
@@ -83,3 +84,6 @@ Thumbnail Square
 
 Thumbnails Rounded
 ![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/thumbnail_rounded.png "edit text backgrounds rounded")
+
+![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/thumbnails_circle.png "circle thumbnails")
+![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/thumbnails_circle_minimal.png "circle thumbnails minimal")
