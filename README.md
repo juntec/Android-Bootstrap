@@ -11,26 +11,28 @@ Android-Bootstrap
 * Added a theme
 * There might be more but I can't think right now
 
-<h3>Working On:</h3>
-* Experimenting with Typography so users can do things like:
-    <code>com.beardedhen.androidbootstrap.typography.heading</code> to get a nice looking heading without having to apply styles themselves, but everything can still be overridden by the user if they want. This is already working actually, but I am still working on it.
 
-![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/develop/images/device_image_2.png "Device Image")
-![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/develop/images/device_image3.png "Device Image")
+Forked from [Bearded-Hen](https://github.com/Bearded-Hen) at [Android-Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap) 
 
-If you have any questions, issues, or just want to let us know where you're using Android Bootstrap tweet us at [@BeardedHen](https://twitter.com/beardedhen) or email support@beardedhen.com 
+![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/device_image_2.png "Device Image")
+![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/device_image3.png "Device Image")
+![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/device_image_thumbnails_circle.png "Device Image")
+
 
 #Features
 * Uses min SDK 7 which is Android 2.1 (Tested on a device running Android 2.2)
 * Bootstrap buttons as per Bootstrap v3
 * Rounded buttons
 * Disabled buttons
+* Gradient buttons (NEW)
 * Various sized buttons (large to extra small)
 * Just text buttons
 * Left, right, left and right, or just icon button
 * Font Awesome text as per Font Awesome v4
 * Animations to Font Awesome Text items
 * EditText backgrounds and states
+* Rounded corner and regular thumbnails
+* Circle thumbnails (NEW)
 
 
 #How to use
@@ -73,6 +75,7 @@ EditText
 
 ![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/bootstrap_edit_text.png "edit text backgrounds")
 
+
 Rounded Edit text
 ![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/bootstrap_edit_text_rounded.png "edit text backgrounds rounded")
 
@@ -81,3 +84,6 @@ Thumbnail Square
 
 Thumbnails Rounded
 ![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/thumbnail_rounded.png "edit text backgrounds rounded")
+
+![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/thumbnails_circle.png "circle thumbnails")
+![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/thumbnails_circle_minimal.png "circle thumbnails minimal")
