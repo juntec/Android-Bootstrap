@@ -24,12 +24,15 @@ Forked from [Bearded-Hen](https://github.com/Bearded-Hen) at [Android-Bootstrap]
 * Bootstrap buttons as per Bootstrap v3
 * Rounded buttons
 * Disabled buttons
+* Gradient buttons (NEW)
 * Various sized buttons (large to extra small)
 * Just text buttons
 * Left, right, left and right, or just icon button
 * Font Awesome text as per Font Awesome v4
 * Animations to Font Awesome Text items
 * EditText backgrounds and states
+* Rounded corner and regular thumbnails
+* Circle thumbnails (NEW)
 
 
 #How to use
