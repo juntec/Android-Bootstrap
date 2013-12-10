@@ -91,6 +91,8 @@ public class BootstrapButton extends Button
 
     private void init(Context context, AttributeSet attrs, int defStyle)
     {
+        if(this.isInEditMode())
+            return;
 
         //this.scale = getResources().getDisplayMetrics().density;
 

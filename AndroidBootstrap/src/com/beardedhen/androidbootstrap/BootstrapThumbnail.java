@@ -79,6 +79,9 @@ public class BootstrapThumbnail extends FrameLayout
 
     private void initialise( AttributeSet attrs )
     {
+        if(this.isInEditMode())
+            return;
+
         LayoutInflater inflator = (LayoutInflater)getContext().getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
 

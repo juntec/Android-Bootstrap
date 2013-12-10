@@ -38,6 +38,9 @@ public class BootstrapEditText extends EditText
 
     private void init(Context context, AttributeSet attrs, int defStyle)
     {
+        if(this.isInEditMode())
+            return;
+
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.BootstrapEditText, defStyle, R.style.BootstrapEditText);
 
         //rounded corners

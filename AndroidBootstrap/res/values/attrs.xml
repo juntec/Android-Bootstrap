@@ -22,7 +22,7 @@
         <attr name="android:textSize"/>
         <attr name="android:textColor"/>
       </declare-styleable>
-      
+
      <declare-styleable name="BootstrapEditText">
         <attr name="be_roundedCorners" format="boolean"/>
         <attr name="be_state" format="string"/>
@@ -30,7 +30,7 @@
         <attr name="android:text"/>
         <attr name="android:hint"/>
         <attr name="android:enabled"/>
-        
+
     </declare-styleable>
 
     <declare-styleable name="BootstrapThumbnail">
@@ -44,6 +44,8 @@
 
     <declare-styleable name="BootstrapCircleThumbnail">
         <attr name="bct_image" format="integer"/>
+        <attr name="bct_size" format="string" />
+        <attr name="bct_minimal" format="boolean" />
         <attr name="android:text"/>
     </declare-styleable>
 
@@ -52,6 +54,6 @@
     <declare-styleable name="BootstrapTypography">
         <attr name="bt_test" format="boolean" />
     </declare-styleable>
-    
+
 </resources>
 

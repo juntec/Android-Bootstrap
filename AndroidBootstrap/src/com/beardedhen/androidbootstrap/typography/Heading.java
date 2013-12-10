@@ -35,7 +35,6 @@ public class Heading extends TextView
 
     private void init(Context context, AttributeSet attrs, int defStyle)
     {
-        Log.v("init", "starting");
         //used in Designer view
         if (isInEditMode()) {
             return;
@@ -46,7 +45,6 @@ public class Heading extends TextView
 
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.BootstrapTypography, defStyle, R.style.BootstrapTypographyHeading);
-        Log.v("typeqq", "setting typeface");
 
         try {
             if(a.getString(R.styleable.BootstrapTypography_bt_test) != null)
