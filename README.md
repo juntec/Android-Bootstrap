@@ -15,11 +15,13 @@ Android-Bootstrap
 * Experimenting with Typography so users can do things like:
     <code>com.beardedhen.androidbootstrap.typography.heading</code> to get a nice looking heading without having to apply styles themselves, but everything can still be overridden by the user if they want. This is already working actually, but I am still working on it.
 
+
+Forked from [Bearded-Hen](https://github.com/Bearded-Hen) at [Android-Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap) 
+
 ![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/device_image_2.png "Device Image")
 ![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/device_image3.png "Device Image")
 ![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/device_image_thumbnails_circle.png "Device Image")
 
-If you have any questions, issues, or just want to let us know where you're using Android Bootstrap tweet us at [@BeardedHen](https://twitter.com/beardedhen) or email support@beardedhen.com 
 
 #Features
 * Uses min SDK 7 which is Android 2.1 (Tested on a device running Android 2.2)
