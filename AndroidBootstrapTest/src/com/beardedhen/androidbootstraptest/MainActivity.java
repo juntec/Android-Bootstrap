@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.beardedhen.androidbootstrap.FontAwesomeText;
 
 public class MainActivity extends Activity {
@@ -17,6 +18,11 @@ public class MainActivity extends Activity {
         final FontAwesomeText tv1 = (FontAwesomeText) findViewById(R.id.lblOne);
         FontAwesomeText tv2 = (FontAwesomeText) findViewById(R.id.lblTwo);
         FontAwesomeText tv3 = (FontAwesomeText) findViewById(R.id.lblThree);
+
+        BootstrapButton b = (BootstrapButton) findViewById(R.id.btnInfoTest);
+        b.setRightIcon("fa-thumbs-o-up");
+        b.setLeftIcon("fa-thumbs-o-up");
+        b.setText("Hello");
 
         //flashing forever FAST
         tv1.startFlashing(this, true, FontAwesomeText.AnimationSpeed.FAST);

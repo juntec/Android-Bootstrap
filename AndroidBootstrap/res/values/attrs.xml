@@ -15,6 +15,7 @@
         <attr name="bb_roundedCorners" format="boolean"/>
         <attr name="bb_size" format="string"/>
         <attr name="bb_gradient" format="boolean" />
+        <attr name="android:text" />
     </declare-styleable>
 
      <declare-styleable name="FontAwesomeText">

@@ -20,10 +20,12 @@ public class BootstrapButton extends Button
 
     private ButtonType defaultButtonType = ButtonType.DANGER;
     ButtonType type = defaultButtonType;
+    private static final String DEFAULT_TEXT = "Default";
 
     private static Map<String, ButtonType> buttonTypes;
     private static Map<String, String> fontAwesomeMap;
     private static Typeface font;
+    String text = DEFAULT_TEXT;
     private String leftIcon = "";
     private String rightIcon = "";
     private String spacing = "   ";//space in dp between icon and text
@@ -112,7 +114,7 @@ public class BootstrapButton extends Button
             {
                 String leftIconKey = a.getString(R.styleable.BootstrapButton_bb_icon_left);
                 this.leftIcon = fontAwesomeMap.get(leftIconKey);
-                if(this.getText().length() != 0)
+                if(super.getText().length() != 0)
                 {
                     this.leftIcon = this.leftIcon + this.spacing;
                 }
@@ -122,7 +124,7 @@ public class BootstrapButton extends Button
             {
                 String rightIconKey = a.getString(R.styleable.BootstrapButton_bb_icon_right);
                 this.rightIcon = fontAwesomeMap.get(rightIconKey);
-                if(this.getText().length() != 0)
+                if(super.getText().length() != 0)
                 {
                     this.rightIcon = this.spacing + this.rightIcon;
                 }
@@ -139,6 +141,11 @@ public class BootstrapButton extends Button
                 this.gradient = a.getBoolean(R.styleable.BootstrapButton_bb_gradient, false);
             }
 
+            if(a.getString(R.styleable.BootstrapButton_android_text) != null)
+            {
+                this.text = a.getString(R.styleable.BootstrapButton_android_text);
+            }
+
         }
         finally
         {
@@ -146,7 +153,7 @@ public class BootstrapButton extends Button
         }
 
 
-        this.setText(this.leftIcon + this.getText().toString() + this.rightIcon);
+        super.setText(this.leftIcon + this.text + this.rightIcon);
 
         this.type = buttonTypes.get(typeString);
 
@@ -197,5 +204,39 @@ public class BootstrapButton extends Button
         }
 
     }
+
+
+    public void setLeftIcon(String iconKey)
+    {
+        this.leftIcon = fontAwesomeMap.get(iconKey);
+
+        if(this.text.length() != 0)
+        {
+            this.leftIcon = this.leftIcon + this.spacing;
+        }
+
+        super.setText(this.leftIcon + this.text + this.rightIcon);
+    }
+
+    public void setRightIcon(String iconKey)
+    {
+        this.rightIcon = fontAwesomeMap.get(iconKey);
+
+        if(this.text.length() != 0)
+        {
+            this.rightIcon = this.spacing + this.rightIcon;
+        }
+
+        super.setText(this.leftIcon + this.text + this.rightIcon);
+    }
+
+    public void setText(String text)
+    {
+        this.text = text;
+
+        super.setText(this.leftIcon + this.text + this.rightIcon);
+    }
+
+
 
 }
