@@ -237,6 +237,42 @@ public class BootstrapButton extends Button
         super.setText(this.leftIcon + this.text + this.rightIcon);
     }
 
+    public void setType(String type)
+    {
+        this.type = buttonTypes.get(type);
+
+        if(this.gradient == true)
+        {
+            //get round or square
+            if(this.roundedCorners == true)
+            {
+
+                this.setBackgroundResource(this.type.roundedGradientDrawable);
+            }
+            else
+            {
+                this.setBackgroundResource(this.type.squareGradientDrawable);
+            }
+        }
+        //non gradient
+        else
+        {
+            //get round or square
+            if(this.roundedCorners == true)
+            {
+                this.setBackgroundResource(this.type.roundedDrawable);
+            }
+            else
+            {
+                this.setBackgroundResource(this.type.squareDrawable);
+            }
+        }
+
+        invalidate();
+        requestLayout();
+
+    }
+
 
 
 }

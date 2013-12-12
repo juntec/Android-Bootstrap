@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
         b.setRightIcon("fa-thumbs-o-up");
         b.setLeftIcon("fa-thumbs-o-up");
         b.setText("Hello");
+        b.setBootstrapType("danger");
 
         //flashing forever FAST
         tv1.startFlashing(this, true, FontAwesomeText.AnimationSpeed.FAST);
