@@ -12,6 +12,10 @@ Android-Bootstrap
 * There might be more but I can't think right now
 
 
+<h3>TODO:</h3>
+* Update wiki
+* update examples
+
 Forked from [Bearded-Hen](https://github.com/Bearded-Hen) at [Android-Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap) 
 
 ![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/device_image_2.png "Device Image")
