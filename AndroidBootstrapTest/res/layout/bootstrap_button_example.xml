@@ -27,6 +27,7 @@
                 android:layout_margin="10dp"
                 android:text="Info"
                 bootstrapbutton:bb_type="info"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_right="fa-info-circle" />
 
             <com.beardedhen.androidbootstrap.BootstrapButton
@@ -36,6 +37,7 @@
                 android:layout_margin="10dp"
                 android:text="Success"
                 bootstrapbutton:bb_type="success"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_right="fa-thumbs-o-up" />
 
             <com.beardedhen.androidbootstrap.BootstrapButton
@@ -45,6 +47,7 @@
                 android:layout_margin="10dp"
                 android:text="Danger"
                 bootstrapbutton:bb_type="danger"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_left="fa-headphones" />
 
             <com.beardedhen.androidbootstrap.BootstrapButton
@@ -54,6 +57,7 @@
                 android:layout_margin="10dp"
                 android:text="Purple"
                 bootstrapbutton:bb_type="purple"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_left="fa-cutlery"/>
 
 
@@ -64,6 +68,7 @@
                 android:layout_margin="10dp"
                 android:text="Warning"
                 bootstrapbutton:bb_type="warning"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_left="fa-comment" />
 
             <com.beardedhen.androidbootstrap.BootstrapButton
@@ -73,6 +78,7 @@
                 android:layout_margin="10dp"
                 android:text="Default"
                 bootstrapbutton:bb_type="default"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_left="fa-heart" />
 
             <com.beardedhen.androidbootstrap.BootstrapButton
@@ -82,6 +88,7 @@
                 android:layout_margin="10dp"
                 android:text="Primary"
                 bootstrapbutton:bb_type="primary"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_left="fa-star"
                 bootstrapbutton:bb_icon_right="fa-gavel"/>
 
@@ -94,6 +101,7 @@
                 android:layout_margin="10dp"
                 android:text="Inverse"
                 bootstrapbutton:bb_type="inverse"
+                bootstrapbutton:bb_gradient="true"
                 bootstrapbutton:bb_icon_left="fa-user"
                 bootstrapbutton:bb_icon_right="fa-gamepad"/>
 
