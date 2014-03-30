@@ -1,6 +1,7 @@
 Android-Bootstrap
 =================
 <h3>Changes:</h3>
+* NEW colors
 * BootstrapButton now extends Button (removes code like set setBootstrapButtonEnabled(boolean enabled) since it gets these methods from Button
 * User no longer has to download the WebAwesome font and put it in their project
 * Changed button colors to brighter colors
