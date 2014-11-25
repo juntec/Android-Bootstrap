@@ -19,6 +19,7 @@
     <include layout="@layout/bootstrap_button_gradient_rounded_example" />
     <include layout="@layout/bootstrap_thumbnail_example"/>
     <include layout="@layout/bootstrap_thumbnail_circle_example"/>
+    <include layout="@layout/bootstrap_fontawesome_badge_example"/>
  	<include layout="@layout/bootstrap_edittext_example"/>
 
     <include layout="@layout/bootstrap_typography_example"/>

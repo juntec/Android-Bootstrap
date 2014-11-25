@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -14,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.beardedhen.androidbootstrap.utils.ImageUtils;
+
+import java.util.Map;
 
 public class BootstrapCircleThumbnail extends FrameLayout
 {
@@ -43,6 +48,8 @@ public class BootstrapCircleThumbnail extends FrameLayout
     private int imageWidth = SIZE_DEFAULT;
     private int imageHeight = SIZE_DEFAULT;
     private int padding = 0;
+    private String icon = "";
+    private static Typeface faFont;
 
     public BootstrapCircleThumbnail(Context context, AttributeSet attrs, int defStyle)
     {
@@ -64,11 +71,22 @@ public class BootstrapCircleThumbnail extends FrameLayout
 
     private void initialise( AttributeSet attrs )
     {
+
+
+
+
+
+
         if(this.isInEditMode())
             return;
 
         LayoutInflater inflator = (LayoutInflater)getContext().getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
+
+        View v = inflator.inflate(R.layout.thumbnail_circle, null, false);
+
+        dimensionsLabel = (TextView) v.findViewById(R.id.dimensionsLabel);
+
 
 
         TypedArray a = getContext().obtainStyledAttributes(attrs,
@@ -80,6 +98,17 @@ public class BootstrapCircleThumbnail extends FrameLayout
         if(a.getString(R.styleable.BootstrapCircleThumbnail_bct_image) != null)
         {
             imageDrawable = a.getResourceId(R.styleable.BootstrapCircleThumbnail_bct_image, 0);
+
+        }
+
+        if(a.getString(R.styleable.BootstrapCircleThumbnail_bct_icon) != null)
+        {
+            icon = a.getString(R.styleable.BootstrapCircleThumbnail_bct_icon);
+            readFont(getContext());
+            Log.v("tese", "font set to " + faFont.toString());
+            dimensionsLabel.setTypeface(faFont);
+            setIcon(icon);
+
 
         }
 
@@ -100,18 +129,21 @@ public class BootstrapCircleThumbnail extends FrameLayout
 
         a.recycle();
 
-        View v = inflator.inflate(R.layout.thumbnail_circle, null, false);
-        dimensionsLabel = (TextView) v.findViewById(R.id.dimensionsLabel);
+
+
+
         container = (LinearLayout) v.findViewById(R.id.container);
         placeholder = (LinearLayout) v.findViewById(R.id.placeholder);
         image = (ImageView) v.findViewById(R.id.image);
         float scale = getResources().getDisplayMetrics().density;
+        float fontSize = 28.0f;
 
 
 
         //small image
         if(this.size.equals(SMALL))
         {
+            fontSize = 16.0f;
             padding = PADDING_SMALL;
             imageWidth = SIZE_SMALL;
             imageHeight = SIZE_SMALL;
@@ -119,18 +151,21 @@ public class BootstrapCircleThumbnail extends FrameLayout
         }
         else if(this.size.equals(MEDIUM))
         {
+            fontSize = 28.0f;
             padding = PADDING_MEDIUM;
             imageWidth = SIZE_MEDIUM;
             imageHeight = SIZE_MEDIUM;
         }
         else if(this.size.equals(LARGE))
         {
+            fontSize = 36.0f;
             padding = PADDING_LARGE;
             imageWidth = SIZE_LARGE;
             imageHeight = SIZE_LARGE;
         }
         else if(this.size.equals(XLARGE))
         {
+            fontSize = 44.0f;
             padding = PADDING_XLARGE;
             imageWidth = SIZE_XLARGE;
             imageHeight = SIZE_XLARGE;
@@ -138,6 +173,7 @@ public class BootstrapCircleThumbnail extends FrameLayout
         //no valid size is given, set image to default size
         else
         {
+
             padding = PADDING_MEDIUM;
             imageWidth = SIZE_DEFAULT;
             imageHeight = SIZE_DEFAULT;
@@ -176,10 +212,20 @@ public class BootstrapCircleThumbnail extends FrameLayout
             //set placeholder image
             placeholder.setBackgroundResource(R.drawable.thumbnail_circle);
 
-            this.dimensionsLabel.setText(text);
+            if(this.icon.equals(""))
+                this.dimensionsLabel.setText(text);
+            else
+            {
+                Log.v("tese", "dimension set to " + icon);
+                this.dimensionsLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, fontSize);
+                this.dimensionsLabel.setText(icon);
+                //container.setPadding(paddingPX, paddingPX, paddingPX, paddingPX);
+            }
+
         }
         else
         {
+            Log.v("test", "image was given22");
             placeholder.setPadding(0, 0, 0, 0);
             this.dimensionsLabel.setVisibility(View.GONE);
             Bitmap bitmap = BitmapFactory.decodeResource(getContext().getResources(), imageDrawable);
@@ -190,6 +236,22 @@ public class BootstrapCircleThumbnail extends FrameLayout
 
         this.addView(v);
     }
+
+    public void setIcon(String faIcon)
+    {
+
+        this.icon = FontAwesome.getFaMap().get(faIcon);
+        Log.v("test", "setting icon " + FontAwesome.getFaMap().get(faIcon));
+
+        if (this.icon == null)
+        {
+            this.icon = FontAwesome.getFaMap().get("fa-question-circle");
+        }
+
+        //this.dimensionsLabel.setText(this.icon);
+    }
+
+
 
     public void setImage(int drawable)
     {
@@ -211,8 +273,57 @@ public class BootstrapCircleThumbnail extends FrameLayout
 
         Bitmap roundBitmap = ImageUtils.getCircleBitmap(bitmap, widthPX, heightPX);
         image.setImageBitmap(roundBitmap);
+        placeholder.setPadding(0, 0, 0, 0);
+        this.dimensionsLabel.setVisibility(View.GONE);
+        this.image.setVisibility(View.VISIBLE);
+        //this.placeholder.setVisibility(View.GONE);
+
+
 
         invalidate();
         requestLayout();
     }
+
+    public void setImage(Bitmap bitmap)
+    {
+        float scale = getResources().getDisplayMetrics().density;
+
+        //convert image size to pixels
+        int widthPX = (int)((this.imageWidth * scale) + 0.5);
+        int heightPX = (int)((this.imageHeight * scale) + 0.5);
+
+        int paddingPX = (int)((this.padding * scale) + 0.5);
+
+        if(this.minimal == false)
+        {
+            widthPX = widthPX - (paddingPX * 2);
+            heightPX = heightPX - (paddingPX * 2);
+        }
+
+        Bitmap roundBitmap = ImageUtils.getCircleBitmap(bitmap, widthPX, heightPX);
+        image.setImageBitmap(roundBitmap);
+        placeholder.setPadding(0, 0, 0, 0);
+        this.dimensionsLabel.setVisibility(View.GONE);
+        this.image.setVisibility(View.VISIBLE);
+
+        invalidate();
+        requestLayout();
+    }
+
+    private static void readFont(Context context)
+    {
+
+        if(faFont == null){
+            try {
+                faFont = Typeface.createFromAsset(context.getAssets(), "fonts/fontawesome-webfont.ttf");
+                Log.v("tese", "font set to awesome");
+
+            } catch (Exception e) {
+                Log.e("CircleThumbnail", "Could not get typeface because " + e.getMessage());
+                faFont = Typeface.DEFAULT;
+            }
+        }
+
+    }
+
 }

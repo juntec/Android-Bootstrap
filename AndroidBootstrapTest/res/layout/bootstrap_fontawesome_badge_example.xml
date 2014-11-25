@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Round Buttons" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+                android:id="@+id/badge1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                bootstrap:bct_size="small"
+                bootstrap:bct_icon="fa-flag-checkered"
+                bootstrap:bct_minimal="true"
+                android:layout_margin="10dp"/>
+
+
+            <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+                android:id="@+id/badge2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                bootstrap:bct_size="medium"
+                bootstrap:bct_icon="fa-bug"
+                bootstrap:bct_minimal="true"
+                android:layout_margin="10dp"/>
+
+            <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+                android:id="@+id/badge3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                bootstrap:bct_size="large"
+                bootstrap:bct_icon="fa-keyboard-o"
+                bootstrap:bct_minimal="true"
+                android:layout_margin="10dp"/>
+
+
+            <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+                android:id="@+id/badge4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                bootstrap:bct_size="xlarge"
+                bootstrap:bct_icon="fa-microphone"
+                bootstrap:bct_minimal="true"
+                android:layout_margin="10dp"/>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>
