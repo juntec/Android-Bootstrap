@@ -1,6 +1,7 @@
 Android-Bootstrap
 =================
 <h3>Changes:</h3>
+* NEW colors
 * BootstrapButton now extends Button (removes code like set setBootstrapButtonEnabled(boolean enabled) since it gets these methods from Button
 * User no longer has to download the WebAwesome font and put it in their project
 * Changed button colors to brighter colors
@@ -47,47 +48,3 @@ Please look at the [wiki](https://github.com/Bearded-Hen/Android-Bootstrap/wiki)
 * [bootstrap edit texts](https://github.com/Bearded-Hen/Android-Bootstrap/wiki/Bootstrap-Edit-Text)
 * [boostrap thumbnails](https://github.com/Bearded-Hen/Android-Bootstrap/wiki/Bootstrap-Thumbnail)
 
-#Examples
-
-Please find included an AndroidBootstrapTest project. Inside the activity_main.xml layout file is examples of how to achieve each of the following buttons:
-
-Bootstrap Buttons
-
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/buttons.png "regular bootstrap buttons")
-
-Rounded Bootstrap Button
-
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/buttons_rounded.png "rounded bootstrap buttons")
-
-Others
-
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/buttons_others.png "other bootstrap buttons")
-
-Sizes
-
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/buttons_sizes.png "sized bootstrap buttons")
-
-Disabled
-
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/buttons_disabled.png "disabled bootstrap buttons")
-
-Font Awesome Text
-
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/font_awesome_text.png "font_awesome_text")
-
-EditText
-
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/bootstrap_edit_text.png "edit text backgrounds")
-
-
-Rounded Edit text
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/bootstrap_edit_text_rounded.png "edit text backgrounds rounded")
-
-Thumbnail Square
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/thumbnail_square.png "edit text backgrounds rounded")
-
-Thumbnails Rounded
-![alt text](https://raw.github.com/Bearded-Hen/Android-Bootstrap/master/images/thumbnail_rounded.png "edit text backgrounds rounded")
-
-![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/thumbnails_circle.png "circle thumbnails")
-![alt text](https://raw.github.com/theDazzler/Android-Bootstrap/master/images/thumbnails_circle_minimal.png "circle thumbnails minimal")
